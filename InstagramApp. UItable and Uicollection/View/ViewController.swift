@@ -45,18 +45,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return instagramData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath) as! StoryCollectionViewCell
+        
+        
         cell.avatarImageView.image = UIImage(named: instagramData[indexPath.row].imageName)
         cell.nameLabel.text = instagramData[indexPath.row].name
         cell.avatarImageView.layer.cornerRadius = 35
@@ -70,7 +72,28 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return CGSize(width: 125, height: 125)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let storyDetailVC = storyboard?.instantiateViewController(identifier: "StoryDetailVC") as? StoryDetailViewController else { return }
+        storyDetailVC.img = instagramData[indexPath.row].imageName
+        storyOpen()
+        self.navigationController?.pushViewController(storyDetailVC, animated: true)
+       
 }
+    
+    private func storyOpen(){
+        UIView.beginAnimations(" ", context: nil)
+        UIView.setAnimationDuration(1.0)
+        UIView.setAnimationCurve(.easeInOut)
+        UIView.setAnimationTransition(.flipFromRight, for: (self.navigationController?.view) as! UIView, cache: false)
+        return UIView.commitAnimations()
+    }
+    
+   
+    
+}
+
+
 
 
 

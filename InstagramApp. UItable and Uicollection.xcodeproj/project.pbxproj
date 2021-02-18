@@ -17,6 +17,8 @@
 		50ABC1AB25CBF58600D466E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABC1AA25CBF58600D466E6 /* User.swift */; };
 		50ABC1B425CD022800D466E6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABC1B225CD022800D466E6 /* PostTableViewCell.swift */; };
 		50ABC1B525CD022800D466E6 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50ABC1B325CD022800D466E6 /* PostTableViewCell.xib */; };
+		50C461CA25DE32130001D997 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C461C925DE32130001D997 /* StoryDetailViewController.swift */; };
+		50C461D025DE5A320001D997 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C461CF25DE5A320001D997 /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		50ABC1AA25CBF58600D466E6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		50ABC1B225CD022800D466E6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		50ABC1B325CD022800D466E6 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		50C461C925DE32130001D997 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
+		50C461CF25DE5A320001D997 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +68,53 @@
 		50ABC19125CBE56900D466E6 /* InstagramApp. UItable and Uicollection */ = {
 			isa = PBXGroup;
 			children = (
-				50ABC19225CBE56900D466E6 /* AppDelegate.swift */,
-				50ABC19425CBE56900D466E6 /* SceneDelegate.swift */,
-				50ABC19625CBE56900D466E6 /* ViewController.swift */,
-				50ABC1A725CBE8CE00D466E6 /* StoryCollectionViewCell.swift */,
-				50ABC19825CBE56900D466E6 /* Main.storyboard */,
-				50ABC19B25CBE56A00D466E6 /* Assets.xcassets */,
-				50ABC19D25CBE56A00D466E6 /* LaunchScreen.storyboard */,
+				50C461CC25DE3DD80001D997 /* Presenter */,
 				50ABC1A025CBE56A00D466E6 /* Info.plist */,
-				50ABC1AA25CBF58600D466E6 /* User.swift */,
-				50ABC1B225CD022800D466E6 /* PostTableViewCell.swift */,
-				50ABC1B325CD022800D466E6 /* PostTableViewCell.xib */,
+				50C461BE25DE1B7B0001D997 /* SupportinFiles */,
+				50C461C225DE21060001D997 /* View */,
+				50C461C025DE1D6B0001D997 /* Model */,
 			);
 			path = "InstagramApp. UItable and Uicollection";
+			sourceTree = "<group>";
+		};
+		50C461BE25DE1B7B0001D997 /* SupportinFiles */ = {
+			isa = PBXGroup;
+			children = (
+				50ABC1B325CD022800D466E6 /* PostTableViewCell.xib */,
+				50ABC19B25CBE56A00D466E6 /* Assets.xcassets */,
+				50ABC19D25CBE56A00D466E6 /* LaunchScreen.storyboard */,
+				50ABC19825CBE56900D466E6 /* Main.storyboard */,
+				50ABC19225CBE56900D466E6 /* AppDelegate.swift */,
+				50ABC19425CBE56900D466E6 /* SceneDelegate.swift */,
+			);
+			path = SupportinFiles;
+			sourceTree = "<group>";
+		};
+		50C461C025DE1D6B0001D997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50ABC1AA25CBF58600D466E6 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50C461C225DE21060001D997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50ABC19625CBE56900D466E6 /* ViewController.swift */,
+				50ABC1A725CBE8CE00D466E6 /* StoryCollectionViewCell.swift */,
+				50ABC1B225CD022800D466E6 /* PostTableViewCell.swift */,
+				50C461C925DE32130001D997 /* StoryDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50C461CC25DE3DD80001D997 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50C461CF25DE5A320001D997 /* MainPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +190,8 @@
 			files = (
 				50ABC1A825CBE8CE00D466E6 /* StoryCollectionViewCell.swift in Sources */,
 				50ABC19725CBE56900D466E6 /* ViewController.swift in Sources */,
+				50C461CA25DE32130001D997 /* StoryDetailViewController.swift in Sources */,
+				50C461D025DE5A320001D997 /* MainPresenter.swift in Sources */,
 				50ABC19325CBE56900D466E6 /* AppDelegate.swift in Sources */,
 				50ABC1AB25CBF58600D466E6 /* User.swift in Sources */,
 				50ABC19525CBE56900D466E6 /* SceneDelegate.swift in Sources */,
